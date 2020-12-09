@@ -28,6 +28,34 @@
     <br>
     <h1 id="bloco">Minha página2 inicial</h1>
     <br>
-    <h1 class="bloco tamfonte">Minha página3 inicial</h1>
-    <p>Este é meu primeiro parágrafo</p>
+    <h1 id="titulo" class="bloco tamfonte">Minha página3 inicial</h1>
+    <p id="mudarTexto">Este é meu primeiro parágrafo </p>
+    <button onclick="mudarTexto()"> Mudar </button> <br> <br>
+    <button onclick="inserirTexto()"> Inserir</button>
+    <button onclick="limparTexto()"> Limpar </button>
+    <input type="text" name="texto" id="campo">
+
+    <script>
+
+    function mudarTexto() {
+     var txt = document.getElementById("titulo").innerHTML
+     console.log(txt)
+     document.getElementById("mudarTexto").innerHTML = txt
+     document.getElementById("mudarTexto").style.color = "red"
+    }
+    
+    function inserirTexto () {
+        var texto = "Maurílio Alves"
+        document.getElementById("campo").value = texto
+        
+    }
+        function limparTexto () {
+            document.getElementById("campo").value = ''
+
+        
+
+    }
+
+    </script>
+
 </body>
